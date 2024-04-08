@@ -80,7 +80,7 @@ yarn run dev
 
 ## Acknowledgement 
 
-All the icons for the game and logo has been used from [FALTICON](https://www.flaticon.com/)
+All the icons for the game and logo has been used from [FLATICON](https://www.flaticon.com/)
 
 ## Contributing
 
