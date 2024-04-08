@@ -3,7 +3,6 @@ import { Footer } from './components/Footer/Footer';
 import { NavbarCustom } from './components/Navbar/Navbar';
 import AppRoute from './components/routes/AppRoute'
 
-
 function App() {
 
   return (
@@ -11,7 +10,6 @@ function App() {
       <NavbarCustom />
       <AppRoute />
       <Footer />
-
     </>
   )
 }

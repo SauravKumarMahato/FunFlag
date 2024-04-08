@@ -10,6 +10,11 @@ import image8 from '../../assets/images/8.png';
 import image9 from '../../assets/images/9.png';
 
 import default_image from '../../assets/images/box.png';
+import {
+  Typography,
+  // Card,
+} from "@material-tailwind/react";
+import { useFlags } from 'flagsmith/react';
 
 const Card = ({ card, index, onClick }) => {
   return (
@@ -22,6 +27,7 @@ const Card = ({ card, index, onClick }) => {
 };
 
 const MemoryGame = () => {
+  const flags = useFlags(['work_in_progress']); // only causes re-render if specified flag values / traits change
   const [cards, setCards] = useState([]);
   const [flippedIndices, setFlippedIndices] = useState([]);
 
@@ -93,17 +99,24 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4 font-sans mt-12 mb-20">
-      <h1 className="text-3xl font-light mb-4">Welcome to Magic Memory Game</h1>
-      <div className="lg:grid lg:grid-cols-6 grid grid-cols-2  gap-4">
-        {cards.map((card, index) => (
-          <Card key={card.id} card={card} index={index} onClick={handleCardClick} />
-        ))}
-      </div>
-      <button onClick={handleRestart} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-        Restart Game
-      </button>
-    </div>
+    <>
+      {flags.work_in_progress.enabled ? (<Typography variant="h2" color="blue-gray" className="my-40">
+        Magic Memory Game Section Under Construction
+      </Typography>) : (<div className="flex flex-col items-center space-y-4 font-sans mt-12 mb-20">
+        <h1 className="text-3xl font-light mb-4">Welcome to Magic Memory Game</h1>
+        <div className="lg:grid lg:grid-cols-6 grid grid-cols-2  gap-4">
+          {cards.map((card, index) => (
+            <Card key={card.id} card={card} index={index} onClick={handleCardClick} />
+          ))}
+        </div>
+        <button onClick={handleRestart} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+          Restart Game
+        </button>
+      </div>)}
+
+
+    </>
+
   );
 };
 
