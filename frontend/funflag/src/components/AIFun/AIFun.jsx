@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 
 
-const API_KEY = 'YOUR_GEMINI_API_KEY'
+const API_KEY = 'AIzaSyAkmbLfwLyKuHuMazK6XBt9HtI5OKbhBZQ'
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
