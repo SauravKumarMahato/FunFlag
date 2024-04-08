@@ -66,7 +66,7 @@ cd FunFlag/frontend/funflag
 yarn install 
 ```
 
-4. Add your OpenAI API key at the top [frontend/funflag/src/components/AIFun/AIFun.jsx](frontend/funflag/src/components/AIFun/AIFun.jsx) files having section something like below: 
+4. Add your GEMINI api key at the top [frontend/funflag/src/components/AIFun/AIFun.jsx](frontend/funflag/src/components/AIFun/AIFun.jsx) files having section something like below: 
 
 ```python
 const API_KEY = 'YOUR_GEMINI_API_KEY'
