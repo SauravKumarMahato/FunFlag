@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input } from "@material-tailwind/react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = 'AIzaSyAkmbLfwLyKuHuMazK6XBt9HtI5OKbhBZQ'
+const API_KEY = 'YOUR_GEMINI_API_KEY'
 
 // Access your API key (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(API_KEY);
