@@ -1,5 +1,3 @@
-# ScriptQuin
-
 
 
 # <p align="center">FunFlag: Fun and Learn</p>
